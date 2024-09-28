@@ -7,59 +7,59 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// ----------------------------------------------------------------------------------------------------------------------------------------------
-// |  TAB    |    Q    |    W    |    E    |    R    |    T    |         |    Y    |   U     |    I       |    O       |    P       |   BSPC   |
-// |  ESC    |    A    |    S    |    D    |    F    |    G    |         |    H    |   J     |    K       |    L       |  ;  :      |   ENTER  |
-// |  SHFT   |    Z    |    X    |    C    |    V    |    B    |         |    N    |   M     |  ,   <     |  .   >     |  /  ?      | SHFT ' " |
-// | LAYER 2 |   CTRL  |   ALT   |   CAPS  |  CMD    | LAYER 1 |         |  SPACE  | LAYER 1 |            |  MUTE      |  VOL DOWN  | VOL UP   |
-// ----------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
+// |  TAB         |    Q       |    W       |    E       |    R    |    T    |||||||||||    Y    |   U     |    I    |    O       |    P       |   BSPC   |
+// |  ESC         |    A       |    S       |    D       |    F    |    G    |||||||||||    H    |   J     |    K    |    L       |  ;  :      |   ENTER  |
+// |  SHFT        |    Z       |    X       |    C       |    V    |    B    |||||||||||    N    |   M     |  ,   <  |  .   >     |  /  ?      | SHFT ' " |
+// | LAYER 2      |   CTRL     |   ALT      |  CAPS      |   CMD   | LAYER 1 |||||||||||  SPACE  | LAYER 1 |         |   MUTE     |  VOL DOWN  | VOL UP   |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-    &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T               &kp Y     &kp U      &kp I     &kp O       &kp P     &kp BSPC
-    &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G               &kp H     &kp J      &kp K     &kp L       &kp SEMI  &kp RET
-    &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B               &kp N     &kp M      &kp COMMA &kp DOT     &kp FSLH  &mt RSHIFT SQT
-    &mo 2     &kp LCTRL &kp LALT  &kp CAPS  &kp LCMD  &mo 1               &kp SPACE &mo 1      &none     &kp C_MUTE  &kp C_VOL_DN    &kp C_VOL_UP
+    &kp TAB        &kp Q        &kp W        &kp E        &kp R        &kp T            &kp Y      &kp U     &kp I        &kp O        &kp P        &kp BSPC
+    &kp ESC        &kp A        &kp S        &kp D        &kp F        &kp G            &kp H      &kp J     &kp K        &kp L        &kp SEMI     &kp RET
+    &kp LSHFT      &kp Z        &kp X        &kp C        &kp V        &kp B            &kp N      &kp M     &kp COMMA    &kp DOT      &kp FSLH     &mt RSHIFT SQT
+    &mo 2          &kp LCTRL    &kp LALT     &kp CAPS     &kp LCMD     &mo 1            &kp SPACE  &mo 1     &none        &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP
                         >;
                 };
                 num_symb_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------------------
-// |   ~     |    !    |    @    |    #    |    $    |    %    |         |    ^    |    =    |    *       |     +      |      -     |    \     |
-// |   0     |    1    |    2    |    3    |    4    |    5    |         |    6    |    7    |    8       |     9      |      _     |    |     |
-// |   `     |    &    |         |    <    |    >    |         |         |    {    |    [    |    (       |     )      |      ]     |    }     |
-// | GLOBE   |  CTRL   |  ALT    |         |  CMD    |  SPACE  |         |  SPACE  |         |  BRI UP    |  BRI DOWN  |  BRI DOWN  |  BRI UP  |
-// ---------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
+// |   ~          |    !       |    @       |    #       |    $    |    %    |||||||||||    ^    |    =    |    *    |     +      |      -     |    \     |
+// |   0          |    1       |    2       |    3       |    4    |    5    |||||||||||    6    |    7    |    8    |     9      |      _     |    |     |
+// |   `          |    &       |            |    <       |    >    |         |||||||||||    {    |    [    |    (    |     )      |      ]     |    }     |
+// | GLOBE        |  CTRL      |  ALT       |            |   CMD   |         |||||||||||  SPACE  |         |         |            |   BRI DOWN |  BRI UP  |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-    &kp TILDE &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT           &kp CARET &kp EQUAL &kp ASTRK    &kp PLUS     &kp MINUS    &kp BSLH
-    &kp N0    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5              &kp N6    &kp N7    &kp N8       &kp N9       &kp UNDER    &kp PIPE
-    &kp GRAVE &kp AMPS  &none     &kp LT    &kp GT    &none               &kp LBRC  &kp LBKT  &kp LPAR     &kp RPAR     &kp RBKT     &kp RBRC
-    &kp GLOBE &kp LCTRL &kp LALT  &none     &kp LCMD  &trans              &kp SPACE &trans    &none        &none        &kp C_BRI_DN &kp C_BRI_UP
+    &kp TILDE      &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET  &kp EQUAL &kp ASTRK    &kp PLUS     &kp MINUS    &kp BSLH
+    &kp N0         &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6     &kp N7    &kp N8       &kp N9       &kp UNDER    &kp PIPE
+    &kp GRAVE      &kp AMPS     &none        &kp LT       &kp GT       &none            &kp LBRC   &kp LBKT  &kp LPAR     &kp RPAR     &kp RBKT     &kp RBRC
+    &kp GLOBE      &kp LCTRL    &kp LALT     &none        &kp LCMD     &trans           &kp SPACE  &trans    &none        &none        &kp C_BRI_DN &kp C_BRI_UP
                         >;
                 };
                 arrows_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------------------
-// | BT CLEAR|         |         |         |         |         |         |         |         |            |            |            | HOME     |
-// |         | BT 0    | BT 1    | BT 2    | BT 3    | BT 4    |         |  LEFT   | DOWN    |   UP       |  RIGHT     |            | PG UP    |
-// | SHFT    |         |         |         |         |         |         |         |         |            |            |            | PG DOWN  |
-// |         |  CTRL   |  ALT    |  CMD    | CMD     | LAYER 3 |         |         |         |            |            |            | END      |
-// ---------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
+// | CLEAR BT     |            |            |            |         |         |||||||||||         |         |         |            |            | HOME     |
+// |              |  BT 0      |   BT 1     |   BT 2     |  BT 3   |   BT 4  |||||||||||  LEFT   | DOWN    |   UP    |  RIGHT     |            | PG UP    |
+// | SHFT         |            |            |            |         |         |||||||||||         |         |         |            |            | PG DOWN  |
+// |              |  CTRL      |  ALT       |            |  CMD    | LAYER 3 |||||||||||         |         |         |            |            | END      |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-    &bt BT_CLR_ALL     &none     &none     &none     &none     &none               &none        &none        &none      &none         &none   &kp HOME
-    &none     &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4               &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT     &none   &kp PG_UP
-    &kp LSHFT &none     &none     &none     &none     &none               &none        &none        &none      &none         &none   &kp PG_DN
-    &trans    &kp LCTRL &kp LALT  &none     &kp LCMD        &to 3               &none        &none        &none      &none         &none   &kp END
+    &bt BT_CLR_ALL &none        &none        &none        &none        &none            &none      &none     &none        &none        &none        &kp HOME
+    &none          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT   &kp DOWN  &kp UP       &kp RIGHT    &none        &kp PG_UP
+    &kp LSHFT      &none        &none        &none        &none        &none            &none      &none     &none        &none        &none        &kp PG_DN
+    &trans         &kp LCTRL    &kp LALT     &none        &kp LCMD     &to 3            &none      &none     &none        &none        &none        &kp END
                         >;
                 };
                 keypad_layer {
-// ---------------------------------------------------------------------------------------------------------------------------------------------
-// |         |         |         |    E    |    $    |   %     |         |   ^     |    7    |    8       |     9      |     +      |  BSPC    |
-// | LAYER 0 |         |         |         |         |         |         |         |    4    |    5       |     6      |     -      |  ENTER   |
-// |   `     |         |         |         |         |         |         |         |    1    |    2       |     3      |     *      |          |
-// |         |         |         |         | LAYER 0 |  SPACE  |         |  SPACE  |    0    |    ,       |     .      |     /      |          |
-// ---------------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
+// |              |            |            |    E       |    $    |   %     |||||||||||   ^     |    7    |    8    |     9      |     +      |  BSPC    |
+// | LAYER 0      |            |            |            |         |         |||||||||||         |    4    |    5    |     6      |     -      |  ENTER   |
+// |   `          |            |            |            |         |         |||||||||||         |    1    |    2    |     3      |     *      |          |
+// |              |            |            |            |         |         |||||||||||  SPACE  |    0    |    ,    |     .      |     /      |          |
+// --------------------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-    &none     &none     &none     &kp LS(E) &kp DLLR  &kp PRCNT           &kp CARET &kp N7    &kp N8       &kp N9       &kp PLUS     &kp BSPC
-    &to 0     &none     &none     &none     &none     &none               &none     &kp N4    &kp N5       &kp N6       &kp MINUS    &kp RET
-    &none     &none     &none     &none     &none     &none               &none     &kp N1    &kp N2       &kp N3       &kp ASTRK    &none
-    &trans    &none     &none     &none     &none     &trans              &kp SPACE &kp N0    &kp COMMA    &kp DOT      &kp FSLH     &none
+    &none          &none        &none        &kp LS(E)    &kp DLLR  &kp PRCNT           &kp CARET  &kp N7    &kp N8       &kp N9       &kp PLUS     &kp BSPC
+    &to 0          &none        &none        &none        &none     &none               &none      &kp N4    &kp N5       &kp N6       &kp MINUS    &kp RET
+    &none          &none        &none        &none        &none     &none               &none      &kp N1    &kp N2       &kp N3       &kp ASTRK    &none
+    &trans         &none        &none        &none        &none     &trans              &kp SPACE  &kp N0    &kp COMMA    &kp DOT      &kp FSLH     &none
                         >;
                 };
         };
