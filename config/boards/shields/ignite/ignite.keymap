@@ -7,31 +7,59 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// ---------------------------------------------------------------------------------
-// |   `  |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  |  \   |
-// | CAPS |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  |  ;  |  ENT |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  | APOS |
-// | CTRL | ALT | GUI | SPC | SPC | SPC |     | SPC | LOW |LARW |DARW |UARW | RARW |
+// ----------------------------------------------------------------------------------------------------------------------------------------------
+// |  TAB    |    Q    |    W    |    E    |    R    |    T    |         |    Y    |   U     |    I       |    O       |    P       |   BSPC   |
+// |  ESC    |    A    |    S    |    D    |    F    |    G    |         |    H    |   J     |    K       |    L       |  ;  :      |   ENTER  |
+// |  SHFT   |    Z    |    X    |    C    |    V    |    B    |         |    N    |   M     |  ,   <     |  .   >     |  /  ?      | SHFT ' " |
+// | LAYER 2 |   CTRL  |   ALT   |   CMD   | LAYER 1 |  SPACE  |         |  SPACE  | LAYER 1 |  LEFT      |  DOWN      |  UP        |   RIGHT  |
+// ----------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-   &kp GRAVE  &kp N1    &kp N2    &kp N3     &kp N4     &kp N5               &kp N6     &kp N7  &kp N8     &kp N9    &kp N0    &kp BSPC
-   &kp TAB    &kp Q     &kp W     &kp E      &kp R      &kp T                &kp Y      &kp U   &kp I      &kp O     &kp P     &kp BSLH
-   &kp CAPS   &kp A     &kp S     &kp D      &kp F      &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp RET
-   &kp LSHFT  &kp Z     &kp X     &kp C      &kp V      &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp APOS
-   &kp LCTRL  &kp LALT  &kp LGUI  &kp SPACE  &kp LALT   &kp LGUI             &kp SPACE  &mo 1   &kp LARW   &kp DARW  &kp UARW  &kp RARW
+    &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T               &kp Y     &kp U      &kp I     &kp O     &kp P     &kp BSPC
+    &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G               &kp H     &kp J      &kp K     &kp L     &kp SEMI  &kp RET
+    &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B               &kp N     &kp M      &kp COMMA &kp DOT   &kp FSLH  &mt RSHIFT SQT
+    &mo 2     &kp LCTRL &kp LALT  &kp LCMD  &mo 1     &mo 1               &kp SPACE &mo 1      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
                         >;
                 };
-                lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |       |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       |       |       |       | BTCLR |
-// |       |       |       |       |       |       |          |       |       |       |       |       |       |
-// |       |       |       | LPAR  | RPAR  |       |          |       | LBKT  | RBKT  |       |       |       |
-// |       |       |       |       |       |       |          |       |       |       |       |       |       |
+                num_symb_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+// |   ~     |    !    |    @    |    #    |    $    |    %    |         |    ^    |    =    |    *       |     +      |      -     |    \     |
+// |   0     |    1    |    2    |    3    |    4    |    5    |         |    6    |    7    |    8       |     9      |      _     |    |     |
+// |   `     |    &    |         |    <    |    >    |         |         |    {    |    [    |    (       |     )      |      ]     |    }     |
+// | GLOBE   |  CTRL   |  ALT    |   CMD   |         |  SPACE  |         |  SPACE  |         |  BRI UP    |  BRI DOWN  |   VOL DOWN |  VOL UP  |
+// ---------------------------------------------------------------------------------------------------------------------------------------------
                         bindings = <
-   &trans    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4           &trans    &trans    &trans   &trans   &trans  &bt BT_CLR
-   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans   &trans  &trans
-   &trans    &trans         &trans         &kp LPAR       &kp RPAR       &trans                 &trans    &kp LBKT  &kp RBKT &kp MINUS   &kp EQUAL  &trans
-   &trans    &trans         &trans         &trans         &trans         &trans                 &trans    &trans    &trans   &trans   &trans  &trans
+    &kp TILDE &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT           &kp CARET &kp EQUAL &kp ASTRK    &kp PLUS     &kp MINUS    &kp BSLH
+    &kp N0    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5              &kp N6    &kp N7    &kp N8       &kp N9       &kp UNDER    &kp PIPE
+    &kp GRAVE &kp AMPS  &none     &kp LT    &kp GT    &none               &kp LBRC  &kp LBKT  &kp LPAR     &kp RPAR     &kp RBKT     &kp RBRC
+    &kp GLOBE &kp LCTRL &kp LALT  &kp LCMD  &trans    &kp SPACE           &kp SPACE &trans    &kp C_BRI_UP &kp C_BRI_DN &kp C_VOL_UP &kp C_VOL_DN
+                        >;
+                };
+                arrows_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+// | LAYER 3 |         |         |         |         |         |         | SEL LEFT| SEL DOWN|   SEL UP   |  SEL RIGHT |            | HOME     |
+// |         |         |         |         |         |         |         |  LEFT   | DOWN    |   UP       |  RIGHT     |            | PG UP    |
+// | SHFT    |         |         |         |         |         |         |         |         |            |            |            | PG DOWN  |
+// |         |  CTRL   |  ALT    |  CMD    |         |         |         |         |         |            |            |            | END      |
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+                        bindings = <
+    &to 3     &none     &none     &none     &none     &none               &kp LS(LEFT) &kp LS(DOWN) &kp LS(UP) &kp LS(RIGHT) &none   &kp HOME
+    &none     &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4               &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT     &none   &kp PG_UP
+    &kp LSHFT &none     &none     &none     &none     &none               &none        &none        &none      &none         &none   &kp PG_DN
+    &trans    &kp LCTRL &kp LALT  &kp LCMD  &bt BT_CLR_ALL  &bt BT_CLR          &none        &none        &none      &none         &none   &kp END
+                        >;
+                };
+                keypad_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+// |         |         |         |    E    |    $    |   %     |         |   ^     |    7    |    8       |     9      |     +      |  BSPC    |
+// | LAYER 0 |         |         |         |         |         |         |         |    4    |    5       |     6      |     -      |  ENTER   |
+// |   `     |         |         |         |         |         |         |         |    1    |    2       |     3      |     *      |          |
+// |         |         |         |         | LAYER 0 |  SPACE  |         |  SPACE  |    0    |    ,       |     .      |     /      |          |
+// ---------------------------------------------------------------------------------------------------------------------------------------------
+                        bindings = <
+    &trans    &none     &none     &kp LS(E) &kp DLLR  &kp PRCNT           &kp CARET &kp N7    &kp N8       &kp N9       &kp PLUS     &kp BSPC
+    &to 0     &none     &none     &none     &none     &none               &none     &kp N4    &kp N5       &kp N6       &kp MINUS    &kp RET
+    &none     &none     &none     &none     &none     &none               &none     &kp N1    &kp N2       &kp N3       &kp ASTRK    &none
+    &none     &none     &none     &none     &to 0     &kp SPACE           &kp SPACE &kp N0    &kp COMMA    &kp DOT      &kp FSLH     &none
                         >;
                 };
         };
