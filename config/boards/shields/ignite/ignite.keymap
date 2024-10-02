@@ -31,7 +31,7 @@
     &kp TILDE      &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET  &kp EQUAL &kp ASTRK    &kp PLUS     &kp MINUS    &kp BSLH
     &kp N0         &kp N1       &kp N2       &kp N3       &kp N4       &kp N5           &kp N6     &kp N7    &kp N8       &kp N9       &kp UNDER    &kp PIPE
     &kp GRAVE      &kp AMPS     &none        &none        &none        &none            &kp LBRC   &kp LBKT  &kp LPAR     &kp RPAR     &kp RBKT     &kp RBRC
-    &kp GLOBE      &kp LCTRL    &kp LALT     &kp CAPS     &kp LCMD     &trans           &kp SPACE  &trans    &none        &none        &kp C_BRI_DN &kp C_BRI_UP
+    &kp GLOBE      &kp LCTRL    &kp LALT     &kp CAPS     &trans       &LALT            &kp SPACE  &trans    &none        &none        &kp C_BRI_DN &kp C_BRI_UP
                         >;
                 };
                 arrows_layer {
